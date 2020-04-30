@@ -1,0 +1,158 @@
+<html>
+    <head>
+        <title>
+            Forms
+        </title>
+        <style>
+        body {
+            background-color: teal;
+            font-family: calibri;
+        }
+        form {
+            width: 50%;
+            min-width: 475px;
+            margin: auto;
+        }
+        fieldset {
+            background-color: aqua;
+            border-radius: 25px;
+            min-width: 50%;
+            box-shadow: black 5px 5px 10px;
+        }
+        legend {
+            width: 75%;
+            font-family: arial;
+            font-weight: bold;
+            font-size: 24;
+            background-color :palegreen;
+            border-radius: 75px;
+            margin: auto;
+            padding: 10px;
+        }
+        h2 {
+            font-size: 28px;
+            text-align: center;
+            margin: auto;
+        }
+        label {
+            display: block;
+            width: 50%;
+            float: left;
+            text-align: right;
+            margin-right: 5px;
+            font-size: larger;
+        }
+        input[type=text], [type=email], [type=password], [type=submit], [type=reset], [type=button], select, textarea {
+            display: block;
+            width: 200px;
+            margin-bottom: 1px;
+            font-size: large;
+            border: 1px solid black;
+            background-color: white;
+        }
+        .container {
+            display: block;
+        }
+        .alignleft {
+            float: left;
+            padding: 20px;
+        }
+        .alignright {
+            float: right;
+            padding: 20px;
+        }
+        #click {
+            margin:auto
+        }
+        form input[type=submit]:hover {
+            background: lightgreen;
+            transition: 1s;
+            border: 1px solid black;
+        }
+        form input[type=reset]:hover {
+            background: lightcoral;
+            transition: 1s;
+            border: 1px solid black;
+        }
+        form button:hover {
+            background: lightseagreen;
+            transition: 1s;
+            border: 1px solid black;
+        }        
+        .button {
+            box-sizing: border-box;
+            margin: auto;
+            display: block;
+            margin-top: 5px;
+            background-color: white;
+            border: 1px solid black;
+            color: black;
+            width: 200px;
+            text-align: center;
+            text-decoration: none;
+            font-size: larger;
+        }
+        .button:hover {
+            background: lightcoral;
+            transition: 1s;
+            border: 1px solid black;
+        }
+        </style>
+    </head>
+    <body>
+        <form action="welcome.php" method="post">
+        <fieldset>
+            <legend><h2>Sign up!</h2></legend>
+            <label for="first_name">First Name:</label>
+            <input type="text" name="first_name" id="first_name" required>
+            <br />
+            <label for="last_name">Last Name:</label>
+            <input type="text" name="last_name" id="last_name" required>
+            <br />
+            <label for="email">Email:</label>
+            <input type="text" name="email" id="email" required>
+            <br />
+            <label for="password">Type your password here:</label>
+            <input type="password" name="password" id="password" required>
+            <br />
+            <div class="container">
+            <label for="yes_no">Recieve emails?</label>
+            <input type="radio" name="yes_no" id="yes_no" value="yes" checked>Yes
+            <input type="radio" name="yes_no" id="yes_no" value="no">No
+            </div>
+            <br />
+            <div class="container">
+            <label for="checks">Favorite Colors:</label>
+            <input type="checkbox" name="green" id="checks" value="Green"> Green
+            <input type="checkbox" name="blue" value="Blue"> Blue
+            <input type="checkbox" name="red" value="Red"> Red
+            <input type="checkbox" name="purple" value="purple"> Purple
+            <input type="checkbox" name="yellow" value="Yellow"> Yellow
+            <input type="checkbox" name="Pink" value="Pink"> Pink
+            </div>
+            <br />
+            <div class="container">
+            <label for="drop-down">Select age range:</label>
+            <select name="drop-down" id="drop-down">
+                <option value="clicktoselect" selected>Click to select</option>
+                <option value="18-21">18-21</option>
+                <option value="22-29">22-29</option>
+                <option value="30-40">30-40</option>
+                <option value="41-64">41-64</option>
+                <option value="65+">65+</option>
+            </select>
+            </div>
+            <br />
+            <label for="para">Why do you want to be a part of this group?</label>
+            <textarea name="para" id="para" rows="5" cols="45">Type here!</textarea>
+            <br />
+            <button type="button" name="click" id="click" onclick="alert('Games and stuff!')">What is this for?</button>
+            <a href="index.htm" class="button">Back</a>
+            <br />
+            <input type="submit" value="Submit" class="alignright">
+            <input type="reset" value="Reset" class="alignleft">
+        </fieldset>
+        </form>
+
+    </body>
+</html>
